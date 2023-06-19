@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { InfogwService } from 'infogw';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculator';
+  constructor(infogwService:InfogwService) {
+    console.log(infogwService.convertUSDToVND(50, 20));
+    
+  }
 }
